@@ -1,0 +1,40 @@
+{
+  "name": "@giveth/bridge-contracts",
+  "version": "1.0.0",
+  "description": "Giveth bridge contracts",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npm run clean && npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel -d ./lib src",
+    "prepare": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giveth/bridge-contracts-class.git"
+  },
+  "keywords": [
+    "giveth",
+    "bridge",
+    "ethereum",
+    "contracts"
+  ],
+  "author": "Amin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "@giveth/eth-contract-class": "^1.0.1"
+  }
+}
