@@ -1,6 +1,6 @@
 {
   "name": "@giveth/bridge-contract-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Giveth bridge contract classes",
   "main": "index.js",
   "scripts": {
