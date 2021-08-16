@@ -1,5 +1,5 @@
 {
-  "name": "@giveth/bridge-contracts",
+  "name": "@giveth/bridge-contracts-class",
   "version": "1.0.0",
   "description": "Giveth bridge contracts",
   "main": "index.js",
