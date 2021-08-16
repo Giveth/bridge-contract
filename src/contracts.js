@@ -7,11 +7,11 @@ const contracts = {};
   'ForeignGivethBridge.json',
   'GivethBridge.json',
   'IForeignGivethBridge.json',
-  'Passable.json',
+  'Pausable.json',
   'Vault.json',
 ].forEach(file => {
   // eslint-disable-next-line global-require,import/no-dynamic-require
-  const { contractName, compilerOutput } = require(`./${file}`);
+  const { contractName, compilerOutput } = require(`../contracts/${file}`);
 
   if (compilerOutput.abi && compilerOutput.evm.bytecode.object.length > 0) {
     contracts[contractName] = generateClass(

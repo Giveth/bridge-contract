@@ -15,8 +15,13 @@
     "url": "git+https://github.com/Giveth/bridge-contract-class.git"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "./lib"
   },
+  "files": [
+    "lib/*",
+    "contracts/*",
+    "index.js"
+  ],
   "keywords": [
     "giveth",
     "bridge",
