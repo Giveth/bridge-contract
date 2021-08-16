@@ -6,6 +6,7 @@ const contracts = {};
   'FailClosedVault.json',
   'ForeignGivethBridge.json',
   'GivethBridge.json',
+  'GivethBridgeMock.json',
   'IForeignGivethBridge.json',
   'Pausable.json',
   'Vault.json',
