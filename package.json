@@ -1,23 +1,26 @@
 {
-  "name": "@giveth/bridge-contract-class",
+  "name": "@giveth/bridge-contract",
   "version": "1.0.4",
   "description": "Giveth bridge contract classes",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf lib",
-    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf lib build",
+    "compile:sol": "solcpiler --output-sol-dir build/contracts",
+    "compile:js": "babel -d ./lib src",
+    "compile": "npm run compile:sol && npm run compile:js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel -d ./lib src",
     "prepare": "npm run compile"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Giveth/bridge-contract-class.git"
+    "url": "git+https://github.com/Giveth/bridge-contract.git"
   },
   "directories": {
     "lib": "./lib"
   },
   "files": [
+    "build/contracts.js",
+    "build/*.json",
     "lib/*",
     "contracts/*",
     "index.js"
@@ -31,9 +34,9 @@
   "author": "Amin",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Giveth/bridge-contract-class/issues"
+    "url": "https://github.com/Giveth/bridge-contract/issues"
   },
-  "homepage": "https://github.com/Giveth/bridge-contract-class#readme",
+  "homepage": "https://github.com/Giveth/bridge-contract#readme",
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
@@ -44,9 +47,12 @@
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "solcpiler": "^1.0.0-beta.7"
   },
   "dependencies": {
-    "@giveth/eth-contract-class": "^1.0.1"
+    "@giveth/common-contracts": "^0.7.1",
+    "@giveth/eth-contract-class": "^1.0.1",
+    "minimetoken": "^0.2.0"
   }
 }
